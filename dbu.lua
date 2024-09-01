@@ -1334,8 +1334,8 @@ local function IRODSEX_fake_script() -- MainFrame.Autofarm handler
 		end
 		questneeded = false
 		-- Function
-		local attacks2 = {"Spirit Barrage",  "Mach Kick", "Wolf Fang Fist", "Vital Strike",  "High Power Rush", "Meteor Crash", "Super Dragon Fist", "God Slicer", 
-			"Meteor Strike", "Meteor Charge", "Vanish Strike"}
+		local attacks2 = {"Spirit Barrage",  "Mach Kick",   "High Power Rush", "Meteor Crash", "Super Dragon Fist", "God Slicer", 
+			}
 	
 		-- Function
 		local attacks = { "Vital Strike", "Uppercut",
@@ -1713,6 +1713,7 @@ local function IRODSEX_fake_script() -- MainFrame.Autofarm handler
 											end
 	
 											questneeded = false
+
 											game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart
 												.CFrame +
 												Vector3.new(0,
@@ -1784,9 +1785,12 @@ local function IRODSEX_fake_script() -- MainFrame.Autofarm handler
 												else
 													task.spawn(function()
 														repeat
-															game:GetService("ReplicatedStorage").Package.Events.p:FireServer(
+															for i=1,4 do
+																game:GetService("ReplicatedStorage").Package.Events.p:FireServer(
 															"Blacknwhite27", 1)
+															end
 															task.wait()
+															
 														until not autoFarmLoopRunning or v.Humanoid.Health <= 0 or
 															game.Players.LocalPlayer.Character.Humanoid.Health <= 0 or
 															game.Workspace.Living[targetted].Stats.Ki.Value > 10000 and
@@ -1825,9 +1829,17 @@ local function IRODSEX_fake_script() -- MainFrame.Autofarm handler
 															task.wait(.3)
 														else
 	
-															game:GetService("ReplicatedStorage").Package.Events.p:FireServer(
-															"Blacknwhite27", 1)
-	
+															repeat
+																for i=1,4 do
+																	game:GetService("ReplicatedStorage").Package.Events.p:FireServer(
+																"Blacknwhite27", 1)
+																end
+																task.wait()
+																
+															until not autoFarmLoopRunning or v.Humanoid.Health <= 0 or
+																game.Players.LocalPlayer.Character.Humanoid.Health <= 0 or
+																game.Workspace.Living[targetted].Stats.Ki.Value > 10000 and
+																checkValue > 2100000
 															task.wait()
 	
 														end
