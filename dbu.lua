@@ -1,7 +1,4 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
+print("script v2.1")-- Instances:
 
 local _1262024DONTDELETEOREDITONLYDUP = Instance.new("ScreenGui")
 local MainFrame = Instance.new("Frame")
