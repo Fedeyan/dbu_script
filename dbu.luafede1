@@ -770,8 +770,8 @@ local function IRODSEX_fake_script() -- MainFrame.Autofarm handler
 				rebirthReq = 20
 			},
 			{
-				name = "Beast",
-				reqvalue = 120000003,
+				name = "Divine Rose Prominence",
+				reqvalue = 200000000,
 				endrangevalue = 100000000000000000000000,
 				alignment = "Evil",
 				rebirthReq = 24
